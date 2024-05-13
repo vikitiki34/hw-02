@@ -23,7 +23,7 @@ body {
     font-family: "Raleway", sans-serif;
     color: #ffffff;
     font-size: 14px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 .container {
@@ -34,7 +34,9 @@ body {
     min-width: 320px; 
     overflow-x: hidden; 
 }
-
+h1{
+    font-size: 64px;
+}
 h2 {
     font-size: 48px;
 }
@@ -42,7 +44,13 @@ h2 {
 h3 {
     font-size: 18px;
 }
+.mobile-menu {
+    display: none;
+}
 
+.menu-button {
+    display: none;
+}
 .header {
     padding-top: 40px;
     padding-bottom: 95px;
@@ -68,7 +76,7 @@ h3 {
 
     .topnav a {
         color: #ffffff;
-        padding: 14px 16px;
+        padding: 14px 8px;
         font-size: 15px;
     }
 
@@ -155,6 +163,10 @@ button {
         line-height: 161%;
     }
 
+.about-us img {
+    width: 570px;
+    height: 454px;
+}
 .footer {
     padding-bottom: 80px;
 }
@@ -167,6 +179,7 @@ button {
 
 .footer_item {
     width: 276px;
+    padding: 112px 30px;
 }
 
     .footer_item > img {
@@ -217,9 +230,156 @@ button {
             background-color: #444;
         }
 
+        
 
 @media screen and (max-width: 1000px) {
     .mobile-menu {
         display: block;
     }
+    h2 {
+        font-size: 48px;
+    }
+    .reasons {
+        padding-top: 160px;
+        padding-bottom: 200px;
+    }
+    .about-us img {
+        width: 403px;
+        height: 305px;
+    }
+    .footer_item {
+        width: 275px;
+        padding: 25px 30px;
+    }
+}
+
+@media screen and (max-width: 744px) {
+    .mobile-menu {
+        display: block;
+    }
+    
+    h2 {
+        font-size: 48px;
+    }
+    .reasons {
+        padding-top: 140px;
+        padding-bottom: 180px;
+    }
+    .advantages {
+        margin-top: 120px;
+        display: flex;
+        flex-direction: column;
+    }
+    .advantages_item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 30px;
+    }
+    .about-us {
+        padding-bottom: 180px;
+    }
+    
+        .about-us > .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 118px;
+            
+        }
+    .about-us-text {
+            margin-top: 90px;
+            text-align: center;
+        }
+        
+            .about-us-text p {
+                margin-bottom: 16px;
+                line-height: 161%;
+    }
+    .about-us img {
+        width: 403px;
+        height: 305px;
+    }
+    .about-us-info{
+        text-align: center;
+    }
+    .footer_item {
+        width: 275px;
+        padding: 25px 30px;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    .mobile-menu {
+        display: block;
+    }
+    h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    h2{
+        font-size: 28px;
+        text-align: center;
+    }
+    .reasons {
+        padding-bottom: 200px;
+    }
+    .advantages {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+    }
+    .advantages_item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+    }
+    .about-us img {
+        width: 388px;
+        height: 211px;
+    }
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ccc;
+        z-index: 100;
+        transform: translateX(100%);
+        transition: transform 1s ease-in-out;
+    }
+      
+    .mobile-menu.active {
+        transform: translateX(0);
+    }
+      
+    .menu-button {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+      
+    .menu-icon {
+        width: 20px;
+        height: 20px;
+        stroke: #000;
+    }
+      
+    .close-button {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .no-scroll {
+        overflow: hidden;
+    }
+
 }
